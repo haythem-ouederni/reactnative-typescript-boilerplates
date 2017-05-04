@@ -25,12 +25,14 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage()
       );
     }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "src/js/index.android";
+    }
+
   };
 
-  @Override
-  protected String getJSMainModuleName() {
-    return "src/js/index.android";
-  }
 
   @Override
   public ReactNativeHost getReactNativeHost() {

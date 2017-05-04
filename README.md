@@ -16,7 +16,7 @@ project.ext.react = [
 
 ````
 
-And open `MainApplication.java` and add the following method:
+And open `MainApplication.java` and add the following method within the `ReactNativeHost` class definition :
 
 ```` java
 
