@@ -4,7 +4,7 @@ The following step are inspired from the **Refactor Android to TypeScript** para
 
 1) **For Android** 
 
-Open `android/app/build.gradle` and add the following line before ` apply from "../../node_modules/react-native/react.gradle"`
+Open `android/app/build.gradle` and add the following line before `apply from "../../node_modules/react-native/react.gradle"`
 
 ```` javascript
 
