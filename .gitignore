@@ -51,3 +51,13 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+# exclude the javascript files
+src/**/*.js
+src/**/*.js.map
+__test__/**/*.js
+__test__/**/*.js.map
+
+# Coverage
+coverage/
+

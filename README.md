@@ -56,7 +56,19 @@ You can choose between NativeBase or ReactNativeElements
 
 # Use Typescript
 
-@todo
+Here is the [followed link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7) to use Typescript within a Nativescript project.
+
+It wasn't 100% followed for example the tests are kept under `__tests__` folder, the `js` files are created at the same folder than the `tsx` file, not all the tslint configuration is used...
+
+[JSX option documentation](https://www.typescriptlang.org/docs/handbook/jsx.html). 
+
+[tsconfig.json file information](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) about the inclusion of `@types`.
+
+[TypeScript compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+
+Be careful :
+* when using custom components
+* with The as operator : use `as` notation insteaod of `<type>` notation
 
 # Use Redux
 
@@ -67,5 +79,12 @@ You can choose between NativeBase or ReactNativeElements
 [CodePush](https://microsoft.github.io/code-push/) is a cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using our provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores.
 
 # Deco IDE
+
+May be to use to bootstrap a screen's components display (design) but it lacks many other options such us formatting a file, when adding a new style property it doesn't add it automatically to the "Properties" tab to edit it other from the code.
+
 [Deco](https://www.decoide.org/) is an all-in-one development environment specifically designed for React Native. It can automatically set up a new project, search for open source components, and insert them. You can also tweak your app graphically in real time. Check it out if you use macOS.
 
+                       
+# Navigation 
+                       
+https://github.com/wix/react-native-navigation

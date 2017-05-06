@@ -1,0 +1,291 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 41,
+					"ch": 20
+				},
+				"to": {
+					"line": 41,
+					"ch": 28
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent",
+			"group": "VIEW"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 42,
+					"ch": 16
+				},
+				"to": {
+					"line": 42,
+					"ch": 25
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems",
+			"group": "VIEW"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 77,
+					"ch": 32
+				},
+				"to": {
+					"line": 77,
+					"ch": 34
+				}
+			},
+			"type": "number",
+			"name": "MarginLeft",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 78,
+					"ch": 37
+				},
+				"to": {
+					"line": 78,
+					"ch": 53
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "BackgroundColor",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 81,
+					"ch": 27
+				},
+				"to": {
+					"line": 81,
+					"ch": 32
+				}
+			},
+			"type": "boolean",
+			"name": "AutoFocus",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 107,
+					"ch": 27
+				},
+				"to": {
+					"line": 107,
+					"ch": 46
+				}
+			},
+			"editWith": "inputField",
+			"type": "string",
+			"name": "SenderName",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 110,
+					"ch": 30
+				},
+				"to": {
+					"line": 110,
+					"ch": 34
+				}
+			},
+			"type": "boolean",
+			"name": "DisplayNames",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 112,
+					"ch": 27
+				},
+				"to": {
+					"line": 112,
+					"ch": 31
+				}
+			},
+			"type": "boolean",
+			"name": "ParseText",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 117,
+					"ch": 42
+				},
+				"to": {
+					"line": 117,
+					"ch": 46
+				}
+			},
+			"type": "boolean",
+			"name": "IsLoadingEarlierMessages",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 119,
+					"ch": 31
+				},
+				"to": {
+					"line": 119,
+					"ch": 46
+				}
+			},
+			"editWith": "inputField",
+			"type": "string",
+			"name": "TypingMessage",
+			"group": "GIFTED MESSENGER"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 132,
+					"ch": 23
+				},
+				"to": {
+					"line": 132,
+					"ch": 30
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 133,
+					"ch": 26
+				},
+				"to": {
+					"line": 133,
+					"ch": 28
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 134,
+					"ch": 28
+				},
+				"to": {
+					"line": 134,
+					"ch": 36
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 135,
+					"ch": 28
+				},
+				"to": {
+					"line": 135,
+					"ch": 44
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 140,
+					"ch": 11
+				},
+				"to": {
+					"line": 140,
+					"ch": 18
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "Color",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 141,
+					"ch": 26
+				},
+				"to": {
+					"line": 141,
+					"ch": 28
+				}
+			},
+			"type": "number",
+			"name": "FontSize",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 142,
+					"ch": 28
+				},
+				"to": {
+					"line": 142,
+					"ch": 36
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontWeight",
+			"type": "string",
+			"name": "FontWeight",
+			"group": "TEXT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 143,
+					"ch": 28
+				},
+				"to": {
+					"line": 143,
+					"ch": 44
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "FontFamily",
+			"type": "string",
+			"name": "FontFamily",
+			"group": "TEXT"
+		}
+	]
+}

@@ -7,14 +7,17 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {AppRegistry} from 'react-native';
+import {AppRegistry, ViewStyle, TextStyle} from 'react-native';
 import {Text, Button, View} from 'native-base';
 
 var pressBro = () => {
     alert('tourout');
-}
+};
 
-export default class RNTestProject extends Component {
+interface Props { }
+interface State { }
+
+export default class RNTestProject extends Component<Props, State> {
 
     // props = { }; props = {     title : "bobo",     button : {         title :
     // 'Pressez moi'     } };
@@ -25,7 +28,7 @@ export default class RNTestProject extends Component {
             <View style={styles.container}>
 
                 <Text style={styles.welcome}>
-                    Welcome to React Native !
+                    Welcome to React Native test !
                 </Text>
                 <Text style={styles.instructions}>
                     To get started yes, edit index.android.js
@@ -53,20 +56,20 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF'
-    },
+    } as ViewStyle,
     welcome: {
         fontSize: 20,
         textAlign: 'center',
         margin: 10
-    },
+    } as TextStyle,
     instructions: {
         textAlign: 'center',
         color: '#333333',
         marginBottom: 5
-    },
+    } as TextStyle,
     buttonContainer: {
         alignItems: 'center'
-    },
+    } as ViewStyle,
     button: {
         marginTop: 35,
         backgroundColor: '#333333',
