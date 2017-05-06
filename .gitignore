@@ -55,8 +55,8 @@ fastlane/screenshots
 # exclude the javascript files
 src/**/*.js
 src/**/*.js.map
-__test__/**/*.js
-__test__/**/*.js.map
+__tests__/**/*.js
+__tests__/**/*.js.map
 
 # Coverage
 coverage/
