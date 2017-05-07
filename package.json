@@ -46,6 +46,9 @@
       "__tests__/**/*.js",
       "!__tests__/**/*.spec.js",
       "!__tests__/**/*.index.js"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!native-base)/"
     ]
   }
 }
