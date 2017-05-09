@@ -6,11 +6,11 @@ The following step are inspired from the **Refactor Android to TypeScript** para
 
 Open `android/app/build.gradle` and add the following line before `apply from "../../node_modules/react-native/react.gradle"`
 
-```` javascript
+```` gradle
 
 project.ext.react = [
 
-    entryFile: "src/js/index.android.js"
+    entryFile: "src/index.android.js"
 
 ]
 
@@ -22,7 +22,7 @@ And open `MainApplication.java` and add the following method within the `ReactNa
 
 @Override
 protected String getJSMainModuleName() {
-  return "artifacts/index.android";
+  return "src/index.android";
 }
 
 ````
@@ -86,5 +86,17 @@ May be to use to bootstrap a screen's components display (design) but it lacks m
 
                        
 # Navigation 
-                       
-https://github.com/wix/react-native-navigation
+
+React Native Navigation library is used :
+  * [on github](https://github.com/wix/react-native-navigation)
+  * [website](https://wix.github.io/react-native-navigation/#/)  
+
+# React Native config
+
+[Module](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native, supporting both iOS and Android. 
+
+### Setup :
+
+1 - yarn add react-native-config
+
+2 - react-native link react-native-config

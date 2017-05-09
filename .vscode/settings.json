@@ -3,5 +3,6 @@
     "files.exclude": {
         "src/**/*.js{,.map}": true,
         "__tests__/**/*.js{,.map}": true
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

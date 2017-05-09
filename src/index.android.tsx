@@ -28,7 +28,7 @@ export default class RNTestProject extends Component<Props, State> {
             <View style={styles.container}>
 
                 <Text style={styles.welcome}>
-                    Welcome to React Native test !
+                    Welcome to React Native test bro!
                 </Text>
                 <Text style={styles.instructions}>
                     To get started yes, edit index.android.js
