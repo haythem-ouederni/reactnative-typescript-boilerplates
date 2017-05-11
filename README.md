@@ -100,3 +100,8 @@ React Native Navigation library is used :
 1 - yarn add react-native-config
 
 2 - react-native link react-native-config
+
+### Interesting links
+
+  * [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view)
+  * [Expo](https://expo.io/@satya164/react-native-tab-view-demos)
