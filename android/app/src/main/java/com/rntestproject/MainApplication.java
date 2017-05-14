@@ -15,37 +15,6 @@ import java.util.List;
 
 public class MainApplication extends NavigationApplication {
 
-  // private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-  //   @Override
-  //   public boolean getUseDeveloperSupport() {
-  //     return BuildConfig.DEBUG;
-  //   }
-
-  //   @Override
-  //   protected List<ReactPackage> getPackages() {
-  //     return Arrays.<ReactPackage>asList(
-  //         new MainReactPackage()
-  //     );
-  //   }
-
-  //   @Override
-  //   protected String getJSMainModuleName() {
-  //     return "src/index.android";
-  //   }
-
-  // };
-
-  // @Override
-  // public ReactNativeHost getReactNativeHost() {
-  //   return mReactNativeHost;
-  // }
-
-  // @Override
-  // public void onCreate() {
-  //   super.onCreate();
-  //   SoLoader.init(this, /* native exopackage */ false);
-  // }
-
   @Override
   public String getJSMainModuleName() {
     return "src/index.android";
