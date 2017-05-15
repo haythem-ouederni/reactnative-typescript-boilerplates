@@ -1,14 +1,14 @@
-import React from 'React';
-import 'react-native';
-import RNTestProject from '../../src/index.ios';
+// import React from 'React';
+// import 'react-native';
+// import RNTestProject from '../../src/index.ios';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+// // Note: test renderer must be required after react-native.
+// import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-  const tree = renderer.create(
-    <RNTestProject/>
-  );
+// it('renders correctly', () => {
+//   const tree = renderer.create(
+//     <RNTestProject/>
+//   );
 
-  console.log(tree.toTree().nodeType);
-});
+//   console.log(tree.toTree().nodeType);
+// });
