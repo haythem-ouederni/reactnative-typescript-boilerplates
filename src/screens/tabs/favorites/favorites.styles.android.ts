@@ -4,7 +4,7 @@ export var favoriteStyles = {
     ...styles,
     button2: {
         marginTop: 35,
-        backgroundColor: 'yellow',
+        backgroundColor: '#f48024',
         shadowColor: 'red',
         shadowOffset: {
             width: 0,

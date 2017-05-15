@@ -4,7 +4,7 @@ export var homeStyles = {
     ...styles,
     button2: {
         marginTop: 35,
-        backgroundColor: 'yellow',
+        backgroundColor: '#ff0d76',
         shadowColor: 'red',
         shadowOffset: {
             width: 0,

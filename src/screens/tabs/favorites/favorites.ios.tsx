@@ -1,6 +1,4 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
  * @flow
  */
 
@@ -32,7 +30,7 @@ export class Favorites extends Component < Props, State > {
                     Second tab bro
                 </Text>
                 <Text style={styles.instructions}>
-                    android
+                    iOS
                 </Text>
 
                 <View style={styles.buttonContainer}>
