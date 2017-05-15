@@ -65,12 +65,15 @@ export class RNTestProject2 extends Component <Props,State> {
                     Second tab bro
                 </Text>
                 <Text style={styles.instructions}>
-                    android
+                    ANDROID
+                </Text>
+                <Text style={styles.instructions}>
+                    To get started yes, edit index.android.tsx
                 </Text>
 
                 <View style={styles.buttonContainer}>
                     <Button style={styles.button} onPress={pressBro}>
-                        <Text>Fuck me</Text>
+                        <Text>Bip me</Text>
                     </Button>
                 </View>
 
@@ -126,21 +129,21 @@ Navigation.startTabBasedApp({
         {
             label: 'One',
             screen: 'react-native-navigation-bootstrap',
-            icon: require('./assets/img/1-freepik.jpg'),
-            selectedIcon: require('./assets/img/1-freepik.jpg'),
+            icon: require('./assets/img/1-freepik.png'),
+            selectedIcon: require('./assets/img/1-freepik.png'),
             title: 'Screen One'
         }, {
             label: 'two',
             screen: 'react-native-navigation-bootstrap2',
-            icon: require('./assets/img/1-freepik.jpg'),
-            selectedIcon: require('./assets/img/1-freepik.jpg'),
+            icon: require('./assets/img/1-freepik.png'),
+            selectedIcon: require('./assets/img/1-freepik.png'),
             title: 'Screen two'
         }
     ],
     tabsStyle: { // optional, add this if you want to style the tab bar beyond the defaults
-        tabBarButtonColor: '#ffff00', // optional, change the color of the tab icons and text (also unselected)
-        tabBarSelectedButtonColor: '#ff9900', // optional, change the color of the selected tab icon and text (only selected)
-        tabBarBackgroundColor: '#551A8B' // optional, change the background color of the tab bar
+        tabBarButtonColor: '#aab8c2', // optional, change the color of the tab icons and text (also unselected)
+        tabBarSelectedButtonColor: '#4080ff', // optional, change the color of the selected tab icon and text (only selected)
+        tabBarBackgroundColor: 'white' // optional, change the background color of the tab bar
     },
     appStyle: {
         orientation: 'portrait' // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'

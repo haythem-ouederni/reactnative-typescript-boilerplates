@@ -68,7 +68,7 @@ It wasn't 100% followed for example the tests are kept under `__tests__` folder,
 
 Be careful :
 * when using custom components
-* with The as operator : use `as` notation insteaod of `<type>` notation
+* with The as operator : it is encouraged to use `as` notation insteaod of `<type>` notation
 
 # Use Redux
 
@@ -90,6 +90,8 @@ May be to use to bootstrap a screen's components display (design) but it lacks m
 React Native Navigation library is used :
   * [on github](https://github.com/wix/react-native-navigation)
   * [website](https://wix.github.io/react-native-navigation/#/)  
+  
+Make sure to perform the [specific steps for ios](https://wix.github.io/react-native-navigation/#/installation-ios)
 
 # React Native config
 
