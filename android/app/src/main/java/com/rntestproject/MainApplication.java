@@ -17,7 +17,7 @@ public class MainApplication extends NavigationApplication {
 
   @Override
   public String getJSMainModuleName() {
-    return "src/index.android";
+    return "build/src/index.android";
   }
 
   @Override

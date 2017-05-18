@@ -103,6 +103,10 @@ Make sure to perform the [specific steps for ios](https://wix.github.io/react-na
 
 2 - react-native link react-native-config
 
+### Add `assets` folder
+
+This [link](https://medium.com/@davidjwoody/how-to-use-absolute-paths-in-react-native-6b06ae3f65d1) was used to make the assets' content available to ts/js files using "assets" as a reference.
+
 ### Interesting links
 
   * [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view)

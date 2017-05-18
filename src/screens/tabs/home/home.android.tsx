@@ -6,7 +6,7 @@
 
 import React, {Component} from 'react';
 import {Text, Button, View} from 'native-base';
-import {homeStyles as styles} from './home.styles';
+import {homeStyles as styles} from './home.styles.android';
 
 var pressBro = () => {
     alert('tourout');

@@ -61,3 +61,6 @@ __tests__/**/*.js.map
 # Coverage
 coverage/
 
+# build
+build/
+

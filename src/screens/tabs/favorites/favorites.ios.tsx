@@ -6,7 +6,7 @@
 
 import React, {Component} from 'react';
 import {Text, Button, View} from 'native-base';
-import {favoriteStyles as styles} from './favorites.styles';
+import {favoriteStyles as styles} from './favorites.styles.ios';
 
 
 var pressBro = () => {
