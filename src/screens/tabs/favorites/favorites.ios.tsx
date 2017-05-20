@@ -3,19 +3,13 @@
 
 'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 import {Text, Button, View} from 'native-base';
 import {favoriteStyles as styles} from './favorites.styles.ios';
+import {FavoritesCommun} from './favorites-commun';
 
 
-var pressBro = () => {
-    alert('tourout');
-};
-
-interface Props {}
-interface State {}
-
-export class Favorites extends Component < Props, State > {
+export class Favorites extends FavoritesCommun {
 
     render() {
 
@@ -30,14 +24,14 @@ export class Favorites extends Component < Props, State > {
                 </Text>
 
                 <View style={styles.buttonContainer}>
-                    <Button style={styles.button} onPress={pressBro}>
+                    <Button style={styles.button} onPress={this.pressBro}>
                         <Text>Bip me</Text>
                     </Button>
                 </View>
 
                 <View style={styles.buttonContainer}>
 
-                    <Button style={styles.button2} onPress={pressBro}>
+                    <Button style={styles.button2} onPress={this.pressBroSecond}>
                         <Text>Second tap</Text>
                     </Button>
                 </View>

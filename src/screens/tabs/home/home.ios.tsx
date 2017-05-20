@@ -3,51 +3,16 @@
 
 'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 import {Text, Button, View} from 'native-base';
 import {homeStyles as styles} from './home.styles.ios';
-import {Navigator} from 'react-native-navigation';
+import {HomeCommun} from './home-commun';
 
-var pressBro = () => {
-    alert('tourout');
-};
-
-interface Props {
-    navigator?: Navigator
-}
-
-interface State {}
-
-export class Home extends Component < Props, State > {
+export class Home extends HomeCommun {
 
     constructor(props) {
         super(props);
-
-        // this.onNavigatorEvent will be our handler
-        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     }
-
-    // method handling the navigation events
-    onNavigatorEvent = (event) => {
-        if(event.id === 'willAppear'){
-            // we make sure that the tabs are displayed when entering the screen
-            this
-                .props
-                .navigator
-                .toggleTabs({
-                    to: 'shown', // required, 'hidden' = hide tab bar, 'shown' = show tab bar
-                    animated: false // does the toggle have transition animation or does it happen immediately (optional)
-                });
-        }
-    };
-
-    goToSimpleScreen = () => {
-        // go to the new screen
-        this
-            .props
-            .navigator
-            .push({screen: 'screens.simpleScreen', title: 'Simple screen'});
-    };
 
     render() {
 
@@ -66,7 +31,7 @@ export class Home extends Component < Props, State > {
                     Shake or press menu button for dev menu sos
                 </Text>
                 <View style={styles.buttonContainer}>
-                    <Button style={styles.button} onPress={pressBro}>
+                    <Button style={styles.button} onPress={this.pressBro}>
                         <Text>Press me</Text>
                     </Button>
                 </View>
