@@ -27,8 +27,10 @@ export class Home extends Component < Props, State > {
         this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     }
 
+    // method handling the navigation events
     onNavigatorEvent = (event) => {
         if(event.id === 'willAppear'){
+            // we make sure that the tabs are displayed when entering the screen
             this
                 .props
                 .navigator

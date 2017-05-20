@@ -25,9 +25,10 @@ export class SimpleScreen extends Component < Props, State > {
             .setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     }
 
+    // method handling the navigation events
     onNavigatorEvent = (event) => {
         if (event.id === 'willAppear') {
-            // hide the tabs
+            // hide the tabs when entering the screen
             this
                 .props
                 .navigator

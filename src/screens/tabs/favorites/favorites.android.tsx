@@ -17,9 +17,6 @@ interface State {}
 
 export class Favorites extends Component < Props, State > {
 
-    // props = { }; props = {     title : "bobo",     button : {         title :
-    // 'Pressez moi'     } };
-
     render() {
 
         return (
