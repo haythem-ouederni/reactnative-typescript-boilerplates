@@ -1,5 +1,4 @@
 /**
- * @flow
  */
 
 'use strict';
@@ -7,18 +6,46 @@
 import React, {Component} from 'react';
 import {Text, Button, View} from 'native-base';
 import {homeStyles as styles} from './home.styles.ios';
+import {Navigator} from 'react-native-navigation';
 
 var pressBro = () => {
     alert('tourout');
 };
 
-interface Props {}
+interface Props {
+    navigator?: Navigator
+}
+
 interface State {}
 
 export class Home extends Component < Props, State > {
 
-    // props = { }; props = {     title : "bobo",     button : {         title :
-    // 'Pressez moi'     } };
+    constructor(props) {
+        super(props);
+
+        // this.onNavigatorEvent will be our handler
+        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    }
+
+    onNavigatorEvent = (event) => {
+        if(event.id === 'willAppear'){
+            this
+                .props
+                .navigator
+                .toggleTabs({
+                    to: 'shown', // required, 'hidden' = hide tab bar, 'shown' = show tab bar
+                    animated: false // does the toggle have transition animation or does it happen immediately (optional)
+                });
+        }
+    };
+
+    goToSimpleScreen = () => {
+        // go to the new screen
+        this
+            .props
+            .navigator
+            .push({screen: 'screens.simpleScreen', title: 'Simple screen'});
+    };
 
     render() {
 
@@ -42,8 +69,8 @@ export class Home extends Component < Props, State > {
                     </Button>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button style={styles.button2} onPress={pressBro}>
-                        <Text>Toto me</Text>
+                    <Button style={styles.button2} onPress={this.goToSimpleScreen}>
+                        <Text>Go to simple screen</Text>
                     </Button>
                 </View>
 

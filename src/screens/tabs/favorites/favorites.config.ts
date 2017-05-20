@@ -2,11 +2,11 @@ import {Navigation} from 'react-native-navigation';
 
 import {Favorites} from './favorites';
 
-Navigation.registerComponent('screen.favorite', () => Favorites);
+Navigation.registerComponent('tabs.favorite', () => Favorites);
 
 export var favoritesTabConfig = {
     label: 'Favorites',
-    screen: 'screen.favorite',
+    screen: 'tabs.favorite',
     icon: require('assets/img/two.png'),
     selectedIcon: require('assets/img/two_selected.png'),
     title: 'My favorites',

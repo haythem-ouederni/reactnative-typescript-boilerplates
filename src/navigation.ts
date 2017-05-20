@@ -2,6 +2,13 @@ import {Navigation} from 'react-native-navigation';
 
 import {homeTabConfig} from './screens/tabs/home/home.config';
 import {favoritesTabConfig} from './screens/tabs/favorites/favorites.config';
+import {registerSimpleScreen} from './screens/simpleScreen/simpleScreen.config';
+
+// register screens
+export function registerScreens(){
+    registerSimpleScreen();
+}
+
 
 // the tab styles
 const tabsStyle = {
@@ -26,6 +33,7 @@ const animationType = 'slide-down';
 export class RNTestProjectNavigation {
 
     constructor() {
+        registerScreens();
         Navigation.startTabBasedApp({
             tabs: [
                 homeTabConfig, favoritesTabConfig
