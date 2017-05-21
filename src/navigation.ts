@@ -1,14 +1,16 @@
 import {Navigation} from 'react-native-navigation';
 
-import {homeTabConfig} from './screens/tabs/home/home.config';
-import {favoritesTabConfig} from './screens/tabs/favorites/favorites.config';
+import {homeTabConfig, registerHomeTab} from './screens/tabs/home/home.config';
+import {favoritesTabConfig, registerFavoritesTab} from './screens/tabs/favorites/favorites.config';
 import {registerSimpleScreen} from './screens/simpleScreen/simpleScreen.config';
+import {Provider} from 'react-redux';
 
 // register screens
-export function registerScreens(){
-    registerSimpleScreen();
+export function registerScreens(aStore : any, aProvider : Provider) {
+    registerSimpleScreen(aStore, aProvider);
+    registerFavoritesTab(aStore, aProvider);
+    registerHomeTab(aStore, aProvider);
 }
-
 
 // the tab styles
 const tabsStyle = {
@@ -19,7 +21,6 @@ const tabsStyle = {
     forceTitlesDisplay: true,
     orientation: 'portrait' // Sets a specific orientation to the entire app. Default: 'auto'. Supported values: 'auto', 'landscape', 'portrait'
 };
-
 
 // the app style
 const appStyle = {
@@ -32,8 +33,10 @@ const animationType = 'slide-down';
 
 export class RNTestProjectNavigation {
 
-    constructor() {
-        registerScreens();
+    constructor(aStore : any, aProvider : Provider) {
+        console.log('5555');
+        console.log(JSON.stringify(aStore));
+        registerScreens(aStore, aProvider);
         Navigation.startTabBasedApp({
             tabs: [
                 homeTabConfig, favoritesTabConfig

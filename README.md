@@ -136,13 +136,43 @@ public class MainActivity extends SplashActivity {
 }
 ````
 
+# Using `Axios`for http requests
+
+`Axios` is used to run http requests and load resources from a remote URL.
+
+Here is the [axios documentation](https://github.com/mzabriskie/axios). 
+
+Run : `yarn add axios`
+
 # Use Redux
 
+Many links/examples are used : 
+
+* [This tutorial](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053) was used to add redux to the react native project
+
+* [This project](https://github.com/JuneDomingo/movieapp) was used as a concrete example.
 @todo
+
+* The added libraries are :
+
+  * `react-redux`
+
+  * `redux`
+
+  * `redux-thunk` that helps making asynchronous calls
+
+  * `redux-logger`
+
+  * `redux-immutable-state-invariant`
+
+  => the command to add them is : `yarn add redux react-redux redux-thunk`
+  
 
 # Internationalization
 
 @todo
+
+# Firebase
 
 # Code Push
 

@@ -8,8 +8,6 @@ import {Text, Button, View} from 'native-base';
 import {homeStyles as styles} from './home.styles.android';
 import {HomeCommun} from './home-commun';
 
-
-
 export class Home extends HomeCommun {
 
     constructor(props) {

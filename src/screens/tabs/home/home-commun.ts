@@ -6,12 +6,21 @@
 import {Component} from 'react';
 import {Navigator} from 'react-native-navigation';
 import {Alert} from 'react-native';
+import * as homeActions from './home.actions';
+import { bindActionCreators } from 'redux';
 
 interface Props {
-    navigator?: Navigator
+    navigator?: Navigator,
+    actions?: any,
+    type?: string,
+    listMovies?: any
 }
 
-interface State {}
+interface State {
+    currentPage?: number,
+    isLoading?: boolean,
+    listMovies: any
+}
 
 export class HomeCommun extends Component < Props, State > {
 
@@ -57,4 +66,18 @@ export class HomeCommun extends Component < Props, State > {
         Alert.alert('i am pressed');
     };
 
+}
+
+export function mapStateToProps(state : any, _ownProps : any) {
+    console.log('2222222');
+    console.log(JSON.stringify(state));
+    console.log(JSON.stringify(_ownProps));
+    // return {listMovies: state.home.listMovies};
+    return {listMovies: state.retrieveListMovies.listMovies};
+}
+
+export function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(Object.assign(homeActions), dispatch)
+    };
 }
