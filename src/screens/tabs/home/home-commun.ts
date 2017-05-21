@@ -120,7 +120,7 @@ export class HomeCommun extends Component < Props, State > {
 }
 
 export function mapStateToProps(state : any, _ownProps : any) {
-    return {..._ownProps, listMovies: state.retrieveListMovies.listMovies};
+    return {listMovies: state.retrieveListMovies.listMovies};
 }
 
 export function mapDispatchToProps(dispatch) {
