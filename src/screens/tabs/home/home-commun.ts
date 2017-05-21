@@ -22,8 +22,7 @@ interface State {
     listMovies : any
 }
 
-export class HomeCommun extends Component < Props,
-State > {
+export class HomeCommun extends Component < Props, State > {
 
     constructor(props) {
         super(props);
@@ -46,6 +45,9 @@ State > {
         // we bind some methods to the context
         this.retrieveMoviesList = this
             .retrieveMoviesList
+            .bind(this);
+        this.goToSimpleScreen = this
+            .goToSimpleScreen
             .bind(this);
 
     }
@@ -74,7 +76,6 @@ State > {
 
     retrieveMoviesList() {
 
-        // id poster_path original_title release_date overview
 
         this
             .props
@@ -119,7 +120,7 @@ State > {
 }
 
 export function mapStateToProps(state : any, _ownProps : any) {
-    return {listMovies: state.retrieveListMovies.listMovies};
+    return {..._ownProps, listMovies: state.retrieveListMovies.listMovies};
 }
 
 export function mapDispatchToProps(dispatch) {
