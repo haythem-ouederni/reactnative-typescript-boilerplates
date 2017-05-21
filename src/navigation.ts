@@ -34,8 +34,6 @@ const animationType = 'slide-down';
 export class RNTestProjectNavigation {
 
     constructor(aStore : any, aProvider : Provider) {
-        console.log('5555');
-        console.log(JSON.stringify(aStore));
         registerScreens(aStore, aProvider);
         Navigation.startTabBasedApp({
             tabs: [

@@ -4,8 +4,6 @@ import {Provider} from 'react-redux';
 
 // register screens
 export function registerHomeTab(aStore : any, aProvider : Provider) {
-    console.log('4444');
-    console.log(JSON.stringify(aStore));
     Navigation.registerComponent('tabs.home', () => Home, aStore, aProvider);
 }
 

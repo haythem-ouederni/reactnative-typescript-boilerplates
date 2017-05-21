@@ -151,7 +151,7 @@ Many links/examples are used :
 * [This tutorial](https://medium.com/@jonlebensold/getting-started-with-react-native-redux-2b01408c0053) was used to add redux to the react native project
 
 * [This project](https://github.com/JuneDomingo/movieapp) was used as a concrete example.
-@todo
+
 
 * The added libraries are :
 
@@ -188,3 +188,4 @@ May be to use to bootstrap a screen's components display (design) but it lacks m
 
   * [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view)
   * [Expo](https://expo.io/@satya164/react-native-tab-view-demos)
+  * [An other Redux tutorial](https://medium.com/react-native-training/redux-4-ways-95a130da0cdc)

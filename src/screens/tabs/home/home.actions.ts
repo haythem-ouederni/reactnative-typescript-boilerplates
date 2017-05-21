@@ -7,7 +7,7 @@ import { TMDB_URL, TMDB_API_KEY } from '../../../commun/constants/api-constants'
 export function retrieveMoviesListSuccess(res) {
     return {
         type: types.RETRIEVE_MOVIES_LIST_SUCCESS,
-        list: res.data
+        listMovies: res.data
     };
 }
 
