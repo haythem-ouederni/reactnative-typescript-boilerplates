@@ -1,6 +1,7 @@
 package com.rntestproject;
 
 import com.facebook.react.ReactPackage;
+import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.reactnativenavigation.NavigationApplication;
 
@@ -21,6 +22,6 @@ public class MainApplication extends NavigationApplication {
 
     @Override
     public List<ReactPackage> createAdditionalReactPackages() {
-        return Arrays.<ReactPackage>asList(new ReactNativeConfigPackage());
+        return Arrays.<ReactPackage>asList(new ReactNativeConfigPackage(), new ReactNativeI18n());
     }
 }

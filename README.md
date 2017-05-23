@@ -170,9 +170,19 @@ Many links/examples are used :
 
 # Internationalization
 
-@todo
+[react-native-i18n](https://github.com/AlexanderZaytsev/react-native-i18n) is used to handle the internationalization.
+
+A [manual setup](https://github.com/AlexanderZaytsev/react-native-i18n#manual-setup) is needed to complete this step.
+
+# Adding Local storage
+
+@TODO
+
+[react-native-storage](https://github.com/sunnylqm/react-native-storage) is used to store data locally on the phone. It is based on the react native's [AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage.html).
 
 # Firebase
+
+@TODO
 
 # Code Push
 

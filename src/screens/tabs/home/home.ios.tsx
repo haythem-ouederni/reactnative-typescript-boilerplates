@@ -9,6 +9,7 @@ import {ScrollView} from 'react-native';
 import {homeStyles as styles} from './home.styles.ios';
 import {HomeCommun, mapStateToProps, mapDispatchToProps} from './home-commun';
 import {connect} from 'react-redux';
+import I18n from '../../../i18n/tabs/home';
 
 class Home extends HomeCommun {
 
@@ -18,7 +19,7 @@ class Home extends HomeCommun {
             <View style={styles.container}>
 
                 <Text style={styles.welcome}>
-                    Welcome to React Native !
+                    {I18n.t('homeTab.content.title')}
                 </Text>
                 <Text style={styles.instructions}>
                     To get started yes, edit index.ios.js
@@ -30,17 +31,17 @@ class Home extends HomeCommun {
                 </Text>
                 <View style={styles.buttonContainer}>
                     <Button style={styles.button} onPress={this.retrieveMoviesList}>
-                        <Text>Fetch</Text>
+                        <Text>{I18n.t('homeTab.content.buttons.fetch')}</Text>
                     </Button>
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button style={styles.button} onPress={this.pressBro}>
-                        <Text>Press me</Text>
+                        <Text>{I18n.t('homeTab.content.buttons.pressMe')}</Text>
                     </Button>
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button style={styles.button2} onPress={this.goToSimpleScreen}>
-                        <Text>Go to simple screen</Text>
+                        <Text>{I18n.t('homeTab.content.buttons.goSimpleScreen')}</Text>
                     </Button>
                 </View>
 

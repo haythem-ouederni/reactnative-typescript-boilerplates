@@ -7,6 +7,7 @@ import React from 'react';
 import {Text, Button, View} from 'native-base';
 import {favoriteStyles as styles} from './favorites.styles.android';
 import {FavoritesCommun} from './favorites-commun';
+import I18n from '../../../i18n/tabs/favorites';
 
 
 export class Favorites extends FavoritesCommun {
@@ -17,7 +18,7 @@ export class Favorites extends FavoritesCommun {
             <View style={styles.container}>
 
                 <Text style={styles.welcome}>
-                    Second tab bro
+                    {I18n.t('favoriteTab.content.title')}
                 </Text>
                 <Text style={styles.instructions}>
                     ANDROID
@@ -25,14 +26,14 @@ export class Favorites extends FavoritesCommun {
 
                 <View style={styles.buttonContainer}>
                     <Button style={styles.button} onPress={this.pressBro}>
-                        <Text>Bip me</Text>
+                        <Text>{I18n.t('favoriteTab.content.buttons.bipMe')}</Text>
                     </Button>
                 </View>
 
                 <View style={styles.buttonContainer}>
 
                     <Button style={styles.button2} onPress={this.pressBroSecond}>
-                        <Text>Second tap</Text>
+                        <Text>{I18n.t('favoriteTab.content.buttons.secondTap')}</Text>
                     </Button>
                 </View>
 

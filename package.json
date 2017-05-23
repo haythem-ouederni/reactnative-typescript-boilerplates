@@ -22,6 +22,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-config": "^0.4.2",
+    "react-native-i18n": "^1.0.0",
     "react-native-navigation": "2.0.0-experimental.304",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",

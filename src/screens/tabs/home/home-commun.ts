@@ -75,8 +75,6 @@ export class HomeCommun extends Component < Props, State > {
     }
 
     retrieveMoviesList() {
-
-
         this
             .props
             .actions

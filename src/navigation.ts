@@ -4,6 +4,10 @@ import {homeTabConfig, registerHomeTab} from './screens/tabs/home/home.config';
 import {favoritesTabConfig, registerFavoritesTab} from './screens/tabs/favorites/favorites.config';
 import {registerSimpleScreen} from './screens/simpleScreen/simpleScreen.config';
 import {Provider} from 'react-redux';
+import I18n from 'react-native-i18n';
+
+// we take advatage of the navigation to be a central module to initiate some I18n commun variables
+I18n.fallbacks = true;
 
 // register screens
 export function registerScreens(aStore : any, aProvider : Provider) {
