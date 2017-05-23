@@ -2,5 +2,8 @@ export default {
     home : {
         listMovies: {}
     },
-    favorite : {}
+    favorite : {},
+    simpleScreen : {
+        nbClicks: 0
+    }
 };
