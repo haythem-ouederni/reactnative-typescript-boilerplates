@@ -11,6 +11,7 @@ import {simpleScreensStyles as styles} from './simpleScreen.styles';
 import * as simpleScreen from './simpleScreen.actions';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import * as LocalStorage from '../../commun/utils/local-storage';
 
 
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
 }
 
 interface State {
-    nbClicks : number
+    nbScrrenViews : number
 }
 
 class SimpleScreen extends Component < Props, State > {
@@ -28,9 +29,9 @@ class SimpleScreen extends Component < Props, State > {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     nbClicks: 0
-        // };
+        this.state = {
+            nbScrrenViews: 0
+        };
 
         // this.onNavigatorEvent will be our handler
         this
@@ -48,6 +49,26 @@ class SimpleScreen extends Component < Props, State > {
         this.increment = this
             .increment
             .bind(this);
+    }
+
+    componentDidMount() {
+        LocalStorage
+            .get('nbScrrenViews')
+            .then((res : number) => {
+                console.log(res);
+                if(res){
+                    this.setState({nbScrrenViews : res + 1});
+                    LocalStorage.set('nbScrrenViews', res + 1);
+                }else {
+                    this.setState({nbScrrenViews : 1});
+                    LocalStorage.set('nbScrrenViews', 1);
+                }
+            })
+            .catch((err : any) => {
+                console.log(err);
+                this.setState({nbScrrenViews : 1});
+                LocalStorage.set('nbScrrenViews', 1);
+            });
     }
 
     // method handling the navigation events
@@ -96,6 +117,7 @@ class SimpleScreen extends Component < Props, State > {
             <View>
                 <Text>{I18n.t('simplesScreen.greeting')}</Text>
                 <Text>{this.props.nbClicks}</Text>
+                <Text>{this.state.nbScrrenViews}</Text>
                 <View>
                     <Button style={styles.buttons.showTabs} onPress={this.displayTabs}><Text>{I18n.t('simplesScreen.buttons.showTabs')}</Text></Button>
                 </View>
