@@ -1,3 +1,9 @@
+# Firebase Example Specific Information
+
+This block contains firebase related information on how to add it to a React Native project with a working example.
+
+@TODO
+
 # Change the entry file 
 
 The following steps are inspired from the **Refactor Android to TypeScript** paragraph in [this link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7)
