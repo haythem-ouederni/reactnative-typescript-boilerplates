@@ -176,19 +176,15 @@ A [manual setup](https://github.com/AlexanderZaytsev/react-native-i18n#manual-se
 
 # Adding Local storage
 
-@TODO
-
 [react-native-storage](https://github.com/sunnylqm/react-native-storage) is used to store data locally on the phone. It is based on the react native's [AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage.html).
 
-# Firebase
+# General Information
 
-@TODO
-
-# Code Push
+### Code Push
 
 [CodePush](https://microsoft.github.io/code-push/) is a cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices. It works by acting as a central repository that developers can publish certain updates to (e.g. JS, HTML, CSS and image changes), and that apps can query for updates from (using our provided client SDKs). This allows you to have a more deterministic and direct engagement model with your end-users, while addressing bugs and/or adding small features that don’t require you to re-build a binary and/or re-distribute it through any public app stores.
 
-# Deco IDE
+### Deco IDE
 
 May be to use to bootstrap a screen's components display (design) but it lacks many other options such us formatting a file, when adding a new style property it doesn't add it automatically to the "Properties" tab to edit it other from the code.
 
