@@ -1,7 +1,29 @@
 {
-  "name": "RNTestProject",
+  "name": "react-native-tutorial-boilerplate",
   "version": "0.0.1",
-  "private": true,
+  "homepage": "todo",
+  "author": {
+    "name": "Haythem OUEDERNI",
+    "email": "haythem.ouederni@gmail.com",
+    "url": "https://haythem-ouederni.github.io/"
+  },
+  "keywords": [
+    "react-native",
+    "tutorial",
+    "boilerplate",
+    "firebase",
+    "asynstorage",
+    "redux",
+    "i18n",
+    "react-native-navigation",
+    "youtube",
+    "google",
+    "maps",
+    "camera",
+    "native",
+    "react"
+  ],
+  "license": "MIT",
   "scripts": {
     "test": "npm run clean:test && npm run lint:test && npm run tsc:test && npm run jest",
     "jest": "jest --coverage",
