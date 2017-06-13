@@ -1,6 +1,6 @@
 # Change the entry file 
 
-The following step are inspired from the **Refactor Android to TypeScript** paragraph in [this link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7)
+The following steps are inspired from the **Refactor Android to TypeScript** paragraph in [this link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7)
 
 1) **For Android** 
 
