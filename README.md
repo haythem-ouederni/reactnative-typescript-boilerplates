@@ -2,7 +2,15 @@
 
 This block contains firebase related information on how to add it to a React Native project with a working example.
 
-@TODO
+The [following tutorial](https://firebase.googleblog.com/2016/01/the-beginners-guide-to-react-native-and_84.html) was followed to add firebase to this project.
+
+1 - Install firebase
+
+```` yarn
+yarn add firebase
+````
+
+
 
 # Change the entry file 
 
