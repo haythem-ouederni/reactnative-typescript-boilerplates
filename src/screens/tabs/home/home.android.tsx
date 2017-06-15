@@ -60,7 +60,7 @@ class Home extends HomeCommun {
                                         height: 20
                                     }}>{movie._title}</Text>
                                 </View>
-                            )
+                            );
                         })}
                 </ScrollView>
 

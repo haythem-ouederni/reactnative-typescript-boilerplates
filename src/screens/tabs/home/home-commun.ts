@@ -10,16 +10,16 @@ import * as homeActions from './home.actions';
 import {bindActionCreators} from 'redux';
 
 interface Props {
-    navigator?: Navigator,
-    actions?: any,
-    listMovies?: any
+    navigator?: Navigator;
+    actions?: any;
+    listMovies?: any;
 }
 
 interface State {
-    currentPage?: number,
-    isLoading?: boolean,
-    type?: string,
-    listMovies : any
+    currentPage?: number;
+    isLoading?: boolean;
+    type?: string;
+    listMovies : any;
 }
 
 export class HomeCommun extends Component < Props, State > {
@@ -109,7 +109,7 @@ export class HomeCommun extends Component < Props, State > {
             .map(key => {
                 // console.log(this.props.listMovies[key]);
                 return this.props.listMovies[key];
-            })
+            });
         }else {
             return [];
         }

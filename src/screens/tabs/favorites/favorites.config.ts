@@ -17,4 +17,4 @@ export var favoritesTabConfig = {
     navigatorStyle: {
         tabBarBackgroundColor: '#4dbce9'
     }
-}
+};

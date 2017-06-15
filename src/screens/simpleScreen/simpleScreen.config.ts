@@ -6,4 +6,4 @@ export function registerSimpleScreen(aStore: any, aProvider: Provider) {
     Navigation.registerComponent('screens.simpleScreen', () => SimpleScreen, aStore, aProvider);
 }
 
-export var simpleScreenConfig = {}
+export var simpleScreenConfig = {};

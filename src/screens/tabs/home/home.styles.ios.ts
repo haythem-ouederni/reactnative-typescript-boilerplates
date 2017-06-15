@@ -16,4 +16,4 @@ export var homeStyles = {
         borderRadius: 50
 
     }
-}
+};

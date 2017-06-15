@@ -13,10 +13,10 @@ export class FavoritesCommun extends Component < Props, State > {
 
     pressBro = () => {
         Alert.alert('tourout');
-    };
+    }
 
     pressBroSecond= () => {
         Alert.alert('second press');
-    };
+    }
 
 }

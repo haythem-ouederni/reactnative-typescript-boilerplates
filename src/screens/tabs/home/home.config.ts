@@ -17,4 +17,4 @@ export var homeTabConfig = {
     navigatorStyle: {
         tabBarBackgroundColor: 'white'
     }
-}
+};

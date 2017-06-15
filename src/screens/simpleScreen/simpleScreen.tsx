@@ -15,13 +15,13 @@ import * as LocalStorage from '../../commun/utils/local-storage';
 
 
 interface Props {
-    navigator?: Navigator,
-    actions?: any,
-    nbClicks : number
+    navigator?: Navigator;
+    actions?: any;
+    nbClicks : number;
 }
 
 interface State {
-    nbScrrenViews : number
+    nbScrrenViews : number;
 }
 
 class SimpleScreen extends Component < Props, State > {
