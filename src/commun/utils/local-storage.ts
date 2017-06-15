@@ -22,7 +22,7 @@ var storage = new Storage({
     sync: {
         // we'll talk about the details later.
     }
-})
+});
 
 /**
  * This is a simple service that saves a (key, value) object into the storage

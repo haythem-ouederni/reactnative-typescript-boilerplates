@@ -1,14 +1,14 @@
 {
-  "rules": {
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
-    "semicolon": [
-      true,
-      "always"
-    ],
-    "no-unused-variable": [true, {"ignore-pattern": "^_"}]
-  }
+    "rules": {
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "no-unused-variable": [true, { "ignore-pattern": "^_" }]
+    }
 }

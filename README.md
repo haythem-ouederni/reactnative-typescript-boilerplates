@@ -72,7 +72,7 @@ You can choose between NativeBase or ReactNativeElements
 
 Here is the [followed link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7) to use Typescript within a Nativescript project.
 
-It wasn't 100% followed for example the tests are kept under `__tests__` folder, the `js` files are created at the same folder than the `tsx` file, not all the tslint configuration is used...
+It wasn't 100% followed for example the tests are kept under `__tests__` folder, the `js` files are created at the same folder than the `ts / tsx` file, not all the tslint configuration is used...
 
 [JSX option documentation](https://www.typescriptlang.org/docs/handbook/jsx.html). 
 

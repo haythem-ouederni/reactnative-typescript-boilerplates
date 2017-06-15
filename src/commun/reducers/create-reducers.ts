@@ -1,7 +1,7 @@
 /**
  * This method is created to help devleopers avoid the swtich expression
- * @param initialState 
- * @param handlers 
+ * @param initialState
+ * @param handlers
  */
 export default function createReducer(initialState : any, handlers : any) {
   return function reducer(state : any = initialState, action : any) {
@@ -10,5 +10,5 @@ export default function createReducer(initialState : any, handlers : any) {
     } else {
       return state;
     }
-  }
+  };
 }
