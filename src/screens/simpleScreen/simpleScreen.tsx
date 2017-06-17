@@ -5,6 +5,7 @@
 
 import React, {Component} from 'react';
 import {Text, View, Button} from 'native-base';
+import {ListView} from 'react-native';
 import {Navigator} from 'react-native-navigation';
 import I18n from '../../i18n/simpleScreen';
 import {simpleScreensStyles as styles} from './simpleScreen.styles';
@@ -12,7 +13,7 @@ import * as simpleScreen from './simpleScreen.actions';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as LocalStorage from '../../commun/utils/local-storage';
-
+import {database} from '../../commun/utils/firebase-config';
 
 interface Props {
     navigator?: Navigator;
@@ -22,15 +23,20 @@ interface Props {
 
 interface State {
     nbScrrenViews : number;
+    dataSource : any;
 }
 
-class SimpleScreen extends Component < Props, State > {
+class SimpleScreen extends Component < Props,
+State > {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            nbScrrenViews: 0
+            nbScrrenViews: 0,
+            dataSource: new ListView.DataSource({
+                rowHasChanged: (row1, row2) => row1 !== row2
+            })
         };
 
         // this.onNavigatorEvent will be our handler
@@ -49,25 +55,60 @@ class SimpleScreen extends Component < Props, State > {
         LocalStorage
             .get('nbScrrenViews')
             .then((res : number) => {
-                if(res){
-                    this.setState({nbScrrenViews : res + 1});
+                if (res) {
+                    this.setState({
+                        nbScrrenViews: res + 1
+                    });
                     LocalStorage.set('nbScrrenViews', res + 1);
-                }else {
-                    this.setState({nbScrrenViews : 1});
+                } else {
+                    this.setState({nbScrrenViews: 1});
                     LocalStorage.set('nbScrrenViews', 1);
                 }
             })
-            .catch((err : any) => {
-                this.setState({nbScrrenViews : 1});
+            .catch((_err : any) => {
+                this.setState({nbScrrenViews: 1});
                 LocalStorage.set('nbScrrenViews', 1);
+            });
+
+        this.listenForListTodos();
+    }
+
+    listenForListTodos() {
+        database
+            .ref('todos')
+            .on('value', (snap) => {
+                // get children as an array
+                var items = [];
+
+                // we get the different todos in the list
+                snap.forEach((child) => {
+                    items.push({
+                        label: child
+                            .val()
+                            .label,
+                        _key: child.key,
+                        state: child
+                            .val()
+                            .state
+                    });
+                    // we return false to continue the iterations
+                    return false;
+                });
+
+                this.setState({
+                    ...this.state,
+                    dataSource: this
+                        .state
+                        .dataSource
+                        .cloneWithRows(items)
+                });
+
             });
     }
 
     // method handling the navigation events
     onNavigatorEvent(event) {
-        if (event.id === 'willAppear') {
-           
-        }
+        if (event.id === 'willAppear') {}
     }
 
     increment() {
@@ -84,7 +125,9 @@ class SimpleScreen extends Component < Props, State > {
                 <Text>{this.props.nbClicks}</Text>
                 <Text>{this.state.nbScrrenViews}</Text>
                 <View>
-                    <Button style={styles.buttons.count} onPress={this.increment}><Text>{I18n.t('simplesScreen.buttons.increment')}</Text></Button>
+                    <Button style={styles.buttons.count} onPress={this.increment}>
+                        <Text>{I18n.t('simplesScreen.buttons.increment')}</Text>
+                    </Button>
                 </View>
             </View>
         );
@@ -92,9 +135,7 @@ class SimpleScreen extends Component < Props, State > {
 }
 
 function mapStateToProps(_state : any, _ownProps : any) {
-    return {
-        nbClicks: _state.incrementCount.nbClicks
-    };
+    return {nbClicks: _state.incrementCount.nbClicks};
 }
 
 function mapDispatchToProps(dispatch) {
@@ -102,6 +143,5 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(Object.assign(simpleScreen), dispatch)
     };
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimpleScreen);
