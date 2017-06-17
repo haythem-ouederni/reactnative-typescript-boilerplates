@@ -2,5 +2,5 @@
 ///////        Simple screen                        //////
 ////////////////////////////////////////////////////////////
 
-// increment the simple screen's test integer
-export const INCREMENT_SIMPLE_SCREEN_NB_CLICKS = 'INCREMENT_SIMPLE_SCREEN_NB_CLICKS';
+// Get the list of Todos from the database
+export const RETRIEVE_LIST_TODOS = 'RETRIEVE_LIST_TODOS';
