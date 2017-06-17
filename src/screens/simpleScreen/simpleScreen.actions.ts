@@ -1,5 +1,6 @@
 import * as types from '../../commun/constants/actions-types';
 import {database} from '../../commun/utils/firebase-config';
+import {TodoData} from '../../data/todos/todo';
 
 /**
  * Method called of retrieving list of Todos success
@@ -10,7 +11,9 @@ export function retrieveListTodosSuccess(todosSnap : firebase.database.DataSnaps
 
     // we get the different todos in the list
     todosSnap.forEach((child) => {
-        lTodos.push(child);
+        // we transform the child into it's view equivalent and add it to the list to
+        // return
+        lTodos.push(new TodoData(child));
 
         // we return false to continue the iterations
         return false;
@@ -23,12 +26,12 @@ export function retrieveListTodosSuccess(todosSnap : firebase.database.DataSnaps
 export function retrieveListTodos() {
     return function (dispatch) {
         return new Promise((_resolve, _reject) => {
-         database
-            .ref('todos')
-            .on('value', (snap) => {
-                dispatch(retrieveListTodosSuccess(snap));
-                _resolve();
-            });
+            database
+                .ref('todos')
+                .on('value', (snap) => {
+                    dispatch(retrieveListTodosSuccess(snap));
+                    _resolve();
+                });
         })
     }
 }

@@ -5,7 +5,7 @@
 
 import React, {Component} from 'react';
 import {Text, View, Button} from 'native-base';
-import {ListView} from 'react-native';
+import {ListView, ListViewDataSource} from 'react-native';
 import {Navigator} from 'react-native-navigation';
 import I18n from '../../i18n/simpleScreen';
 import {simpleScreensStyles as styles} from './simpleScreen.styles';
@@ -20,7 +20,7 @@ interface Props {
 }
 
 interface State {
-    dataSource : any;
+    dataSource : ListViewDataSource;
     // boolean indicating whether the list of Todos is loading or not
     isLoadingTodos : boolean;
 }
@@ -34,8 +34,8 @@ State > {
         this.state = {
             isLoadingTodos: true,
             dataSource: new ListView.DataSource({
-                rowHasChanged: (row1, row2) => row1 !== row2
-            })
+            rowHasChanged: (r1, r2) => r1 !== r2
+        })
         };
 
         // this.onNavigatorEvent will be our handler
@@ -58,25 +58,37 @@ State > {
                 this.setState({
                     ...this.state,
                     isLoadingTodos: false
+                    // dataSource: this.state.dataSource.cloneWithRows(this.props.todos)
                 });
+                this.todos();
             });
     }
 
     todos() {
         if (this.props.todos) {
-            return Object
-                .keys(this.props.todos)
-                .map(key => {
-                    return this.props.todos[key];
+            this.setState({
+                    ...this.state,
+                    dataSource: this.state.dataSource.cloneWithRows(this.props.todos)
                 });
+            // return Object
+            //     .keys(this.props.todos)
+            //     .map(key => {
+            //         return this.props.todos[key];
+            //     });
         } else {
-            return [];
+            // return [];
         }
     }
 
     // method handling the navigation events
     onNavigatorEvent(event) {
         if (event.id === 'willAppear') {}
+    }
+
+    _renderItem(item) {
+        return (
+            <Text>{item.label}</Text>
+        );
     }
 
     render() {
@@ -91,8 +103,20 @@ State > {
                         <Text>TODO</Text>
                     </Button>
 
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this
+                        ._renderItem
+                        .bind(this)}></ListView>
+                        
+                        {/*<ListView
+                        datasource={this.state.dataSource}
+                        renderrow={this
+                        ._renderItem
+                        .bind(this)}/> */}
+
                     {/*The list of TODOs*/}
-                    {this
+                    {/*{this
                         .todos()
                         .map((todo) => {
                             return (
@@ -104,7 +128,7 @@ State > {
                                         - {todo.state}</Text>
                                 </View>
                             )
-                        })}
+                        })}*/}
                 </View>
             </View>
         );

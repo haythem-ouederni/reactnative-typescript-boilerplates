@@ -1,9 +1,6 @@
 export default {
-    home : {
-        listMovies: {}
-    },
-    favorite : {},
     simpleScreen : {
-        nbClicks: 0
+        isLoadingTodos: true,
+        dataSource: null
     }
 };
