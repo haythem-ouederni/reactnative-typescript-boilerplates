@@ -13,15 +13,19 @@
   version "19.2.3"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-19.2.3.tgz#61748040e8589a891dfc2ec1d16a2dd74482980e"
 
-"@types/react-native@^0.43.11":
-  version "0.43.12"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.43.12.tgz#ae8136bf48a4bb78a6a549e5ee124ffbf6ff6e25"
+"@types/react-native@^0.44.11":
+  version "0.44.11"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.44.11.tgz#5c5ae4ee2a0cf1acab8cbb4972cba236256e5c1f"
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.24":
+"@types/react@*":
   version "15.0.24"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.24.tgz#8a75299dc37906df327c18ca918bf97a55e7123b"
+
+"@types/react@^15.0.29":
+  version "15.0.29"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.29.tgz#a10831b9d025bcef6cab7bc1c6547bdddbabc938"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -4051,9 +4055,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
+typescript@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.0.tgz#aef5a8d404beba36ad339abf079ddddfffba86dd"
 
 ua-parser-js@^0.7.9:
   version "0.7.12"
