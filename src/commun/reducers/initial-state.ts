@@ -1,6 +1,6 @@
 export default {
     simpleScreen : {
-        isLoadingTodos: true,
-        dataSource: null
+        isFetchingTodos: true,
+        todos: []
     }
 };

@@ -20,11 +20,20 @@ export function retrieveListTodosSuccess(todosSnap : firebase.database.DataSnaps
     });
     return {type: types.RETRIEVE_LIST_TODOS, todos: lTodos};
 }
+
+/**
+ * Method called to signal the beginning of fetching
+ */
+export function onRetrieveListTodosBegin() {
+    return {type: types.RETRIEVE_LIST_TODOS_BEGINS};
+}
+
 /**
  * This method retrieves the list of Todos from the database
  */
 export function retrieveListTodos() {
     return function (dispatch) {
+        dispatch(onRetrieveListTodosBegin());
         return new Promise((_resolve, _reject) => {
             database
                 .ref('todos')

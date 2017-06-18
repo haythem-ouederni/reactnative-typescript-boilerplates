@@ -17,12 +17,13 @@ interface Props {
     navigator?: Navigator;
     actions?: any;
     todos?: Array < any >;
+    isFetchingTodos?: boolean;
 }
 
 interface State {
     dataSource : ListViewDataSource;
-    // boolean indicating whether the list of Todos is loading or not
-    isLoadingTodos : boolean;
+    // boolean indicating whether the list of Todos is loading or not isLoadingTodos
+    // : boolean;
 }
 
 class SimpleScreen extends Component < Props,
@@ -32,10 +33,10 @@ State > {
         super(props);
 
         this.state = {
-            isLoadingTodos: true,
+            // isLoadingTodos: true,
             dataSource: new ListView.DataSource({
-            rowHasChanged: (r1, r2) => r1 !== r2
-        })
+                rowHasChanged: (r1, r2) => r1 !== r2
+            })
         };
 
         // this.onNavigatorEvent will be our handler
@@ -53,30 +54,23 @@ State > {
         this
             .props
             .actions
-            .retrieveListTodos()
-            .then(() => {
-                this.setState({
-                    ...this.state,
-                    isLoadingTodos: false
-                    // dataSource: this.state.dataSource.cloneWithRows(this.props.todos)
-                });
-                this.todos();
-            });
+            .retrieveListTodos();
     }
 
-    todos() {
-        if (this.props.todos) {
+    /**
+     * Method called each time the props values change
+     * @param nextProps : the new value of props
+     */
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
+        if (nextProps.todos && nextProps.todos !== this.props.todos) {
             this.setState({
-                    ...this.state,
-                    dataSource: this.state.dataSource.cloneWithRows(this.props.todos)
-                });
-            // return Object
-            //     .keys(this.props.todos)
-            //     .map(key => {
-            //         return this.props.todos[key];
-            //     });
-        } else {
-            // return [];
+                ...this.state,
+                dataSource: this
+                    .state
+                    .dataSource
+                    .cloneWithRows(nextProps.todos)
+            });
         }
     }
 
@@ -96,7 +90,7 @@ State > {
             <View>
                 <Text>{I18n.t('simplesScreen.greeting')}</Text>
                 <View>
-                    <Text>{this.state.isLoadingTodos
+                    <Text>{this.props.isFetchingTodos
                             ? 'yes'
                             : 'no'}</Text>
                     <Button style={styles.buttons.count} onPress={() => {}}>
@@ -108,27 +102,7 @@ State > {
                         renderRow={this
                         ._renderItem
                         .bind(this)}></ListView>
-                        
-                        {/*<ListView
-                        datasource={this.state.dataSource}
-                        renderrow={this
-                        ._renderItem
-                        .bind(this)}/> */}
 
-                    {/*The list of TODOs*/}
-                    {/*{this
-                        .todos()
-                        .map((todo) => {
-                            return (
-                                <View key={todo._key}>
-                                    <Text
-                                        style={{
-                                        height: 20
-                                    }}>{todo.label}
-                                        - {todo.state}</Text>
-                                </View>
-                            )
-                        })}*/}
                 </View>
             </View>
         );
@@ -136,7 +110,7 @@ State > {
 }
 
 function mapStateToProps(_state : any, _ownProps : any) {
-    return {todos: _state.retrieveListTodos.todos};
+    return {todos: _state.todosReducer.todos, isFetchingTodos: _state.todosReducer.isFetchingTodos};
 }
 
 function mapDispatchToProps(dispatch) {
