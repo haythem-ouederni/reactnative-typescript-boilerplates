@@ -19,11 +19,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "15.0.24"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.24.tgz#8a75299dc37906df327c18ca918bf97a55e7123b"
-
-"@types/react@^15.0.29":
+"@types/react@*", "@types/react@^15.0.29":
   version "15.0.29"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.29.tgz#a10831b9d025bcef6cab7bc1c6547bdddbabc938"
 
@@ -3249,6 +3245,10 @@ react-native-navigation@2.0.0-experimental.304:
 react-native-storage@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/react-native-storage/-/react-native-storage-0.2.1.tgz#6b1cbd5da79ecdb7422d330b798d31b4e240df64"
+
+react-native-swipe-list-view@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-list-view/-/react-native-swipe-list-view-0.4.1.tgz#f4b0288e090fc86f743bc30b45df829de729bcd7"
 
 react-native-vector-icons@^4.2.0:
   version "4.2.0"
