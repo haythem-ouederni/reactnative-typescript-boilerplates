@@ -53,3 +53,7 @@ The [react-native-swipe-list-view](https://github.com/jemise111/react-native-swi
 
 # The base project
 You can find the basic project used to build this firebase project [here](@todo)
+
+# Adding the icons
+
+The [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) librairy is used for this project to use Icons. Some manual setup is needed over the Android and iOS projects as indicated [here](https://github.com/oblador/react-native-vector-icons).
