@@ -4,14 +4,15 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Text, View, Button} from 'native-base';
-import {ListView, ListViewDataSource} from 'react-native';
+import {View} from 'native-base';
+import {ListView, ListViewDataSource, ActivityIndicator} from 'react-native';
 import {Navigator} from 'react-native-navigation';
 import I18n from '../../i18n/simpleScreen';
 import {simpleScreensStyles as styles} from './simpleScreen.styles';
 import * as simpleScreenActions from './simpleScreen.actions';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {ListTodos} from '../../components/todos/listTodos/listTodos';
 
 interface Props {
     navigator?: Navigator;
@@ -31,6 +32,9 @@ State > {
 
     constructor(props) {
         super(props);
+
+        // @TODO : to delete
+        I18n;
 
         this.state = {
             // isLoadingTodos: true,
@@ -57,51 +61,20 @@ State > {
             .retrieveListTodos();
     }
 
-    /**
-     * Method called each time the props values change
-     * @param nextProps : the new value of props
-     */
-    componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
-        if (nextProps.todos && nextProps.todos !== this.props.todos) {
-            this.setState({
-                ...this.state,
-                dataSource: this
-                    .state
-                    .dataSource
-                    .cloneWithRows(nextProps.todos)
-            });
-        }
-    }
-
     // method handling the navigation events
     onNavigatorEvent(event) {
         if (event.id === 'willAppear') {}
     }
 
-    _renderItem(item) {
-        return (
-            <Text>{item.label}</Text>
-        );
-    }
-
     render() {
         return (
-            <View>
-                <Text>{I18n.t('simplesScreen.greeting')}</Text>
+            <View style={styles.simpleScreenCotnainer}>
                 <View>
-                    <Text>{this.props.isFetchingTodos
-                            ? 'yes'
-                            : 'no'}</Text>
-                    <Button style={styles.buttons.count} onPress={() => {}}>
-                        <Text>TODO</Text>
-                    </Button>
+                    {this.props.isFetchingTodos && (
+                        <ActivityIndicator animating={true} color='#FFF' size="large"></ActivityIndicator>
+                    )}
 
-                    <ListView
-                        dataSource={this.state.dataSource}
-                        renderRow={this
-                        ._renderItem
-                        .bind(this)}></ListView>
+                    <ListTodos todos={this.props.todos}></ListTodos>
 
                 </View>
             </View>
