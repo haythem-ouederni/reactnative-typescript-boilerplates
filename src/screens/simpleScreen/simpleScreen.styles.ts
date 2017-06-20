@@ -3,7 +3,7 @@ export var simpleScreensStyles = {
         backgroundColor: '#202020',
         flex: 1
     },
-    whiteText: {
-        color: '#FFF'
+    waitingSpinner: {
+        marginTop: 20
     }
 };

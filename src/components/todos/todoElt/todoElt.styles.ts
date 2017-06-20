@@ -1,6 +1,6 @@
-import {ViewStyle, TextStyle} from 'react-native';
+import {ViewStyle} from 'react-native';
 
-const lineHeight= 50;
+const lineHeight = 50;
 
 const actionButtonHeight = lineHeight - 1;
 
@@ -20,17 +20,24 @@ export var todoEltStyles = {
             width: actionButtonWidth,
             height: lineHeight,
         },
+        buttonCommunStyle: {
+            button: {
+                width: actionButtonWidth,
+                height: actionButtonHeight,
+                marginTop: -15,
+                borderRadius: 0
+            } as ViewStyle,
+            icon: {
+                color: '#fff',
+                fontSize: 24
+            }
+        },
         deleteButton: {
             button: {
-                backgroundColor : '#cb2431',
-                width : actionButtonWidth,
-                height : actionButtonHeight,
-                padding : 10,
-                textAlign : 'center',
-                marginBottom: 1
-            } as TextStyle,
+                backgroundColor: '#cb2431',
+            } as ViewStyle,
             icon: {
-                color: '#fff'
+                width: 16
             }
         },
         listItemRight: {
@@ -43,35 +50,25 @@ export var todoEltStyles = {
         } as ViewStyle,
         editButton: {
             button: {
-                backgroundColor : '#ff4500',
-                width : actionButtonWidth,
-                height : actionButtonHeight,
-                padding : 10,
-                textAlign : 'center',
-                marginBottom: 1
-            } as TextStyle,
+                backgroundColor: '#ff4500',
+            } as ViewStyle,
             icon: {
-                color: '#fff'
+                width: 19
             }
         },
         doneButton: {
             button: {
-                backgroundColor : '#28a745',
-                width : actionButtonWidth,
-                height : actionButtonHeight,
-                padding : 10,
-                textAlign : 'center',
-                marginBottom: 1
-            } as TextStyle,
+                backgroundColor: '#28a745',
+            } as ViewStyle,
             icon: {
-                color: '#fff'
+                width: 16
             }
         }
     },
     todoLineItem: {
         marginLeft: 0,
         padding: 10,
-        height : lineHeight,
+        height: lineHeight,
         backgroundColor: '#202020'
     },
     todoLabel: {

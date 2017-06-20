@@ -9,6 +9,6 @@
             true,
             "always"
         ],
-        "no-unused-variable": [true, { "ignore-pattern": "^_" }],
+        "no-unused-variable": [true, { "ignore-pattern": "^_" }]
     }
 }

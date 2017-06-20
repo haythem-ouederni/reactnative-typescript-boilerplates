@@ -17,18 +17,15 @@ import {ListTodos} from '../../components/todos/listTodos/listTodos';
 interface Props {
     navigator?: Navigator;
     actions?: any;
-    todos?: Array < any >;
+    todos?: Array<any>;
     isFetchingTodos?: boolean;
 }
 
 interface State {
-    dataSource : ListViewDataSource;
-    // boolean indicating whether the list of Todos is loading or not isLoadingTodos
-    // : boolean;
+    dataSource: ListViewDataSource;
 }
 
-class SimpleScreen extends Component < Props,
-State > {
+class SimpleScreen extends Component <Props, State> {
 
     constructor(props) {
         super(props);
@@ -63,7 +60,8 @@ State > {
 
     // method handling the navigation events
     onNavigatorEvent(event) {
-        if (event.id === 'willAppear') {}
+        if (event.id === 'willAppear') {
+        }
     }
 
     render() {
@@ -71,7 +69,8 @@ State > {
             <View style={styles.simpleScreenCotnainer}>
                 <View>
                     {this.props.isFetchingTodos && (
-                        <ActivityIndicator animating={true} color='#FFF' size="large"></ActivityIndicator>
+                        <ActivityIndicator style={styles.waitingSpinner} animating={true} color='#FFF'
+                                           size="large"></ActivityIndicator>
                     )}
 
                     <ListTodos todos={this.props.todos}></ListTodos>
@@ -82,7 +81,7 @@ State > {
     }
 }
 
-function mapStateToProps(_state : any, _ownProps : any) {
+function mapStateToProps(_state: any, _ownProps: any) {
     return {todos: _state.todosReducer.todos, isFetchingTodos: _state.todosReducer.isFetchingTodos};
 }
 

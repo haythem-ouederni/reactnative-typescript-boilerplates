@@ -5,18 +5,18 @@
 
 import React, {Component} from 'react';
 import {TodoData} from '../../../data/todos/todo';
-import {View, Text, ListItem, Icon} from 'native-base';
+import {View, Text, ListItem, Icon, Button} from 'native-base';
 import {SwipeListView, SwipeRow} from 'react-native-swipe-list-view';
 import {todoEltStyles as styles} from './todoElt.styles';
 
 interface Props {
-    todo : TodoData;
+    todo: TodoData;
 }
 
-interface State {}
+interface State {
+}
 
-export class TodoElt extends Component < Props,
-State > {
+export class TodoElt extends Component <Props, State> {
 
     constructor(props) {
         super(props);
@@ -40,26 +40,34 @@ State > {
                     <ListItem style={styles.swipeBackground.listItemLeft}>
 
                         {/*The delete button*/}
-                        <Text style={styles.swipeBackground.deleteButton.button}>
+                        <Button iconLeft
+                                style={{...styles.swipeBackground.deleteButton.button, ...styles.swipeBackground.buttonCommunStyle.button}}
+                                onPress={() => {
+                                    alert('broooo');
+                                }}>
                             <Icon
                                 ios="ios-trash-outline"
                                 android="md-trash"
-                                style={styles.swipeBackground.deleteButton.icon}></Icon>
-                        </Text>
+                                style={{...styles.swipeBackground.deleteButton.icon, ...styles.swipeBackground.buttonCommunStyle.icon}}/>
+                        </Button>
                     </ListItem>
 
                     {/*the left buttons*/}
                     <ListItem style={styles.swipeBackground.listItemRight}>
 
                         {/*The edit button*/}
-                        <Text style={styles.swipeBackground.editButton.button}>
-                            <Icon ios="ios-create-outline" android="md-create" style={styles.swipeBackground.editButton.icon}></Icon>
-                        </Text>
+                        <Button iconLeft
+                                style={{...styles.swipeBackground.editButton.button, ...styles.swipeBackground.buttonCommunStyle.button}}>
+                            <Icon ios="ios-create-outline" android="md-create"
+                                  style={{...styles.swipeBackground.editButton.icon, ...styles.swipeBackground.buttonCommunStyle.icon}}/>
+                        </Button>
 
                         {/*The done button*/}
-                        <Text style={styles.swipeBackground.doneButton.button}>
-                            <Icon  name="md-checkmark" style={styles.swipeBackground.doneButton.icon}></Icon>
-                        </Text>
+                        <Button iconLeft
+                                style={{...styles.swipeBackground.doneButton.button, ...styles.swipeBackground.buttonCommunStyle.button}}>
+                            <Icon name="md-checkmark"
+                                  style={{...styles.swipeBackground.doneButton.icon, ...styles.swipeBackground.buttonCommunStyle.icon}}/>
+                        </Button>
                     </ListItem>
                 </View>
 
