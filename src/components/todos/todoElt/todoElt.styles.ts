@@ -6,6 +6,10 @@ const actionButtonHeight = lineHeight - 1;
 
 const actionButtonWidth = 50;
 
+export const listItemLeftWidth = actionButtonWidth;
+
+export const listItemRightWidth = actionButtonWidth * 3;
+
 export var todoEltStyles = {
     swipeBackground: {
         viewContainer: {
@@ -17,7 +21,7 @@ export var todoEltStyles = {
         listItemLeft: {
             marginLeft: 0,
             padding: 0,
-            width: actionButtonWidth,
+            width: listItemLeftWidth,
             height: lineHeight,
         },
         buttonCommunStyle: {
@@ -45,7 +49,7 @@ export var todoEltStyles = {
             padding: 0,
             alignItems: 'center',
             bottom: 0,
-            width: actionButtonWidth * 2,
+            width: listItemRightWidth,
             height: lineHeight,
         } as ViewStyle,
         editButton: {
@@ -62,6 +66,14 @@ export var todoEltStyles = {
             } as ViewStyle,
             icon: {
                 width: 16
+            }
+        },
+        inProgressButton: {
+            button: {
+                backgroundColor: '#4a8bfc',
+            } as ViewStyle,
+            icon: {
+                width: 21
             }
         }
     },

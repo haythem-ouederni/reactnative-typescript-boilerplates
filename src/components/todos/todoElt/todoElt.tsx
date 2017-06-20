@@ -7,7 +7,7 @@ import React, {Component} from 'react';
 import {TodoData} from '../../../data/todos/todo';
 import {View, Text, ListItem, Icon, Button} from 'native-base';
 import {SwipeListView, SwipeRow} from 'react-native-swipe-list-view';
-import {todoEltStyles as styles} from './todoElt.styles';
+import {todoEltStyles as styles, listItemLeftWidth, listItemRightWidth} from './todoElt.styles';
 
 interface Props {
     todo: TodoData;
@@ -28,10 +28,10 @@ export class TodoElt extends Component <Props, State> {
         todo;
         return (
             <SwipeRow
-                leftOpenValue={50}
-                rightOpenValue={-100}
-                stopLeftSwipe={50}
-                stopRightSwipe={-100}>
+                leftOpenValue={listItemLeftWidth}
+                rightOpenValue={listItemRightWidth * -1}
+                stopLeftSwipe={listItemLeftWidth}
+                stopRightSwipe={listItemRightWidth * -1}>
 
                 {/*The back ground action buttons bar*/}
                 <View style={styles.swipeBackground.viewContainer}>
@@ -60,6 +60,13 @@ export class TodoElt extends Component <Props, State> {
                                 style={{...styles.swipeBackground.editButton.button, ...styles.swipeBackground.buttonCommunStyle.button}}>
                             <Icon ios="ios-create-outline" android="md-create"
                                   style={{...styles.swipeBackground.editButton.icon, ...styles.swipeBackground.buttonCommunStyle.icon}}/>
+                        </Button>
+
+                        {/*The In Progress button*/}
+                        <Button iconLeft
+                                style={{...styles.swipeBackground.inProgressButton.button, ...styles.swipeBackground.buttonCommunStyle.button}}>
+                            <Icon ios="ios-code-working-outline" android="md-code-working"
+                                  style={{...styles.swipeBackground.inProgressButton.icon, ...styles.swipeBackground.buttonCommunStyle.icon}}/>
                         </Button>
 
                         {/*The done button*/}
