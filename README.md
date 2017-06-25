@@ -2,6 +2,8 @@
 
 The following steps are inspired from the **Refactor Android to TypeScript** paragraph in [this link](https://medium.com/@rintoj/react-native-with-typescript-40355a90a5d7)
 
+The `tsconfig.json` is configured such as the js files are built within a `build` directory at the project's root.
+
 1) **For Android** 
 
 Open `android/app/build.gradle` and add the following line before `apply from "../../node_modules/react-native/react.gradle"`
@@ -10,7 +12,7 @@ Open `android/app/build.gradle` and add the following line before `apply from ".
 
 project.ext.react = [
 
-    entryFile: "src/index.android.js"
+    entryFile: "build/src/index.android.js"
 
 ]
 
@@ -22,18 +24,18 @@ And open `MainApplication.java` and add the following method within the `ReactNa
 
 @Override
 protected String getJSMainModuleName() {
-  return "src/index.android";
+  return "build/src/index.android";
 }
 
 ````
 
 2) **For iOS**
 
-To fix this problem, open `ios/RNTestProject/AppDelegate.m` and change `"index.ios"` to `"artifacts/index.ios"`.
+To fix this problem, open `ios/RNTestProject/AppDelegate.m` and change `"index.ios"` to `"build/src/index.ios"`.
 
-```` Swift
+```` Objective-C
 
-jsCodeLocation = [[RCTBundleURLProvider sharedSettings]] jsBundleURLForBundleRoot:@"src/js/index.ios" 
+jsCodeLocation = [[RCTBundleURLProvider sharedSettings]] jsBundleURLForBundleRoot:@"build/src/index.ios" 
 fallbackResource:nil];
 
 ````
