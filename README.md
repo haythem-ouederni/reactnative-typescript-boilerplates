@@ -1,6 +1,6 @@
 # Firebase Example Specific Information
 
-This branch of the project contains [firebase](https://firebase.google.com/) related information on how to add it to a `ReactNative` project with a working example.
+This branch uses the basics of the [master branch] of the project and contains [firebase](https://firebase.google.com/) related information on how to add it to a `ReactNative` project with a working example.
 
 [This tutorial](https://firebase.googleblog.com/2016/01/the-beginners-guide-to-react-native-and_84.html) was followed to add firebase to this project.
 
@@ -12,7 +12,7 @@ yarn add firebase
 
 2 - Creating a Firebase database
 
-Create your `Firebase` databse via the [Firebase console](https://console.firebase.google.com).
+Create your `Firebase` database via the [Firebase console](https://console.firebase.google.com).
 
 The structure of the data is as follows : 
 
@@ -41,9 +41,25 @@ export const firebaseApp = firebase.initializeApp(firebaseConfig);
 export const database = firebaseApp.database();
 ````
 
-To put the different information related to the Firebase database you have created
+In this project, the different information related to the Firebase database are put withn an `.env` file on the root of the project. The `.env` file content look like the following: 
 
-4 - Use the Firebase databse you have created/set
+```` text
+API_KEY = your-api-key
+AUTH_DOMAIN = your-auth-domain.firebaseapp.com
+DATABASE_URL = https://your-auth-domain.firebaseio.com
+STORAGE_BUCKET = your-auth-domain.appspot.com;
+````
+
+Those information are accessed using the [React Native config](https://github.com/luggit/react-native-config) module.
+
+```` typescript
+import Config from 'react-native-config';
+
+// the firebase constants
+export const FIREBASE_API_KEY = Config.API_KEY;
+````
+
+4 - Use the Firebase database you have created/set
 
     a - Import it in your file
 
@@ -67,8 +83,11 @@ Nb : This branch of the project is not 100% complete but the basic information o
 The [react-native-swipe-list-view](https://github.com/jemise111/react-native-swipe-list-view) library was used to make the list of TODO elements swipable.
 
 # The base project
-You can find the basic project used to build this firebase project at the [master](@todo) branch
+You can find the basic project used to build this firebase project at the [master branch].
 
 # Adding the icons
 
 The [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) librairy is used for this project to use Icons. Some manual setup is needed over the Android and iOS projects as indicated [here](https://github.com/oblador/react-native-vector-icons).
+
+
+[master branch]: todo
