@@ -116,8 +116,8 @@ class SimpleScreen extends Component < Props, State > {
         return (
             <View>
                 <Text>{I18n.t('simplesScreen.greeting')}</Text>
-                <Text>{this.props.nbClicks}</Text>
-                <Text>{this.state.nbScrrenViews}</Text>
+                <Text>nb clicks : {this.props.nbClicks}</Text>
+                <Text>nb simple screen displays : {this.state.nbScrrenViews}</Text>
                 <View>
                     <Button style={styles.buttons.showTabs} onPress={this.displayTabs}><Text>{I18n.t('simplesScreen.buttons.showTabs')}</Text></Button>
                 </View>
