@@ -64,3 +64,6 @@ coverage/
 # build
 build/
 
+# exlude some configuration files
+.env
+
