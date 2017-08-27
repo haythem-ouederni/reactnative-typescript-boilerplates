@@ -22,7 +22,7 @@ These are the different steps to run the app :
 
 1 - Make sure you have [ReactNative cli](https://facebook.github.io/react-native/docs/getting-started.html), [npm](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm), [yarn](https://yarnpkg.com/fr/docs/install) and [Typescript]() installed on your machine
 
-2 - Download or clone the source code this project
+2 - Download or clone the source code of this project
 
 3 - Open a terminal and go within the root folder of the project
 
