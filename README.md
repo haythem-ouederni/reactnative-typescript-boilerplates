@@ -6,9 +6,9 @@ The choice was made to perform all the development in `Typescript` instead of th
 
 Each branch of this ReactNative project will reflect the use of a specific librairy, tool or framework, ...
 
-For example, the [firebase-example](todo) branch contains a full example of an application (still under construction) that uses Firebase for its database.
+For example, the [firebase-example](https://github.com/haythem-ouederni/reactnative-typescript-boilerplates/tree/firebase-example) branch contains a full example of an application (still under construction) that uses Firebase for its database.
 
-The [master](todo) branch contains the basic setup.
+The [master](https://github.com/haythem-ouederni/reactnative-typescript-boilerplates/tree/master) branch contains the basic setup.
 
 Many other branches are to come to demonstrate the use of :
 - Google Maps
