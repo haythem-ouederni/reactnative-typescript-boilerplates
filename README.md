@@ -90,4 +90,4 @@ You can find the basic project used to build this firebase project at the [maste
 The [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) librairy is used for this project to use Icons. Some manual setup is needed over the Android and iOS projects as indicated [here](https://github.com/oblador/react-native-vector-icons).
 
 
-[master branch]: todo
+[master branch]: https://github.com/haythem-ouederni/reactnative-typescript-boilerplates/tree/master
